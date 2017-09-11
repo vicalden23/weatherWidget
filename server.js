@@ -6,4 +6,4 @@ const app = express();
 app.use(express.static(__dirname + '/client'));
 app.use(bodyParser.json());
 
-app.listen(2023, () => console.log('LISTENING PORT NUMBER 2023'));
+app.listen(process.env.PORT || 2023, () => console.log('LISTENING PORT NUMBER 2023'));
