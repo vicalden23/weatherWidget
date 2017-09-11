@@ -13,6 +13,9 @@ let weatherData = fetch('https://weathersync.herokuapp.com/ip')
         console.log(res);
         temp = res.main.temp;
         description = res.weather[0].main;
+        document.getElementById('city').innerHTML = city;
+        document.getElementById('temp').innerHTML = temp;
+        document.getElementById('description').innerHTML = description;
         console.log(temp, description);
       })
       .catch(function(err) {
@@ -22,8 +25,3 @@ let weatherData = fetch('https://weathersync.herokuapp.com/ip')
   .catch(function(err) {
     console.log(err);
   });
-
-Promise.all([weatherData])
-  .then(() => {
-    console.log('Promises resolved')
-  })
