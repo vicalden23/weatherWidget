@@ -11,7 +11,7 @@ let weatherData = fetch('https://weathersync.herokuapp.com/ip')
       .then(res => res.json())
       .then(res => {
         console.log(res);
-        temp = res.main.temp;
+        temp = ((res.main.temp / 10) * (9 / 5) + 32).toFixed(2) + ' F';
         description = res.weather[0].main;
         picture = `http://openweathermap.org/img/w/${res.weather[0].icon}.png`;
         document.getElementById('city').innerHTML = city;

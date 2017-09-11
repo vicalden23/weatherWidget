@@ -1,3 +1,24 @@
 .container {
   text-align: center;
 }
+
+#title {
+  font-size: 25px
+}
+
+#city {
+  font-size: 50px;
+  margin: 20px;
+}
+
+#temp {
+  font-size: 85px;
+}
+
+#picture {
+  width: 200px;
+}
+
+#description {
+  font-size: 50px;
+}
